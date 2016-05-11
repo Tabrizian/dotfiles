@@ -94,9 +94,6 @@ set splitright
 " Highlight the current line
 set cursorline
 
-" Ensure Vim doesn't beep at you every time you make a mistype
-set visualbell
-
 " Visual autocomplete for command menu (e.g. :e ~/path/to/file)
 set wildmenu
 
@@ -253,6 +250,7 @@ map <Leader>ct :w<cr>:!cucumber<cr>
 
 " Tmux style window selection
 map <Leader>ws :ChooseWin<cr>
+
 " }}}
 
 " Commands {{{
@@ -349,5 +347,6 @@ autocmd FilterWritePre * call SetDiffColors()
 autocmd BufNewFile *solution.tex  0r ~/Templates/homework.tex
 autocmd BufNewFile *report.tex 0r ~/Templates/report.tex
 autocmd BufNewFile *.vhd 0r ~/Templates/default.vhd
+autocmd BufNewFile *.html 0r ~/Templates/skeleton.html
 " }}}
 
