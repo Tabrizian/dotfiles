@@ -2,7 +2,8 @@
 export GITHUB_USER="tabrizian"
 export PATH=/opt/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin/ghdl/bin # Reorder PATH so local bin is first
 export JUNIT_HOME=/usr/share/java
-export GREP_OPTIONS='--color=auto'
+
+alias grep="grep --color=auto"
 export GREP_COLOR='1;32'
 export MANPAGER="less -X" # Don’t clear the screen after quitting a manual page
 export EDITOR="vim"
