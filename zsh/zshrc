@@ -15,7 +15,6 @@ export LS_COLORS=Gxfxcxdxbxegedabagacad
 
 # Ruby {{{
 function get_ruby_version() {
-ruby -v | awk '{print $1 " " $2}'
 }
 # }}}
 
