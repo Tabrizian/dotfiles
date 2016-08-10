@@ -11,6 +11,8 @@ export TERM="screen-256color"
 export CLICOLOR=1
 export LSCOLORS=Gxfxcxdxbxegedabagacad
 export LS_COLORS=Gxfxcxdxbxegedabagacad
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 # }}}
 
 # Ruby {{{
@@ -316,3 +318,9 @@ function homestead() {
     ( cd ~/Homestead && vagrant $* )
 }
 # }}}
+source ~/Documents/Git/bash-wakatime/bash-wakatime.sh
+
+
+
+export NVM_DIR="/home/iman/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
