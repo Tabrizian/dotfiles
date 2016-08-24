@@ -342,7 +342,7 @@ fun! SetDiffColors()
 endfun
 autocmd FilterWritePre * call SetDiffColors()
 " }}}
-
+set shell=bash
 " Templates {{{
 autocmd BufNewFile *solution.tex  0r ~/Templates/homework.tex
 autocmd BufNewFile *report.tex 0r ~/Templates/report.tex
