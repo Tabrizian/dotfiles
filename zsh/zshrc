@@ -320,6 +320,8 @@ function homestead() {
 # }}}
 
 
+LC_CTYPE=en_US.UTF-8
+LC_ALL=en_US.UTF-8
 
 export NVM_DIR="/home/iman/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
