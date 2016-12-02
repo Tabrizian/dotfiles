@@ -1,9 +1,8 @@
-scriptencoding utf-8
-set encoding=utf-8
 " Settings {{{
 " Switch syntax highlighting on, when the terminal has colors
 syntax on
 
+set shell=bash
 " Use vim, not vi api
 set nocompatible
 
@@ -120,7 +119,7 @@ filetype plugin indent on " required by Pathogen Plugin Manager
 
 " Theme
 set background=light
-colorscheme Tomorrow-Night
+colorscheme Tomorrow-Night-Eighties
 
 " CtrlP
 map <leader>t <C-p>
@@ -146,6 +145,7 @@ let g:ctrlp_custom_ignore = '\v[\/]((node_modules)|\.(git|svn|grunt|sass-cache))
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Airline (status line)
+" air-line
 let g:airline_powerline_fonts = 1
 
 " Gist authorisation settings
@@ -344,7 +344,7 @@ fun! SetDiffColors()
 endfun
 autocmd FilterWritePre * call SetDiffColors()
 " }}}
-set shell=bash
+
 " Templates {{{
 autocmd BufNewFile *solution.tex  0r ~/Templates/homework.tex
 autocmd BufNewFile *report.tex 0r ~/Templates/report.tex
