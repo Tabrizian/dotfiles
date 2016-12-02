@@ -77,6 +77,7 @@ set guioptions-=T
 
 " UTF encoding
 set encoding=utf-8
+scriptencoding=utf-8
 
 " Autoload files that have changed outside of vim
 set autoread
