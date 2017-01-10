@@ -368,3 +368,8 @@ autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 " }}}
+
+set t_Co=256
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
+

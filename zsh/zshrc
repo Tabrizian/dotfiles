@@ -1,6 +1,6 @@
 # Exports {{{
 export GITHUB_USER="tabrizian"
-export PATH=~/.local/bin:/usr/local/go/bin:/opt/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin/ghdl/bin:. # Reorder PATH so local bin is first
+export PATH=~/.local/bin:/usr/local/go/bin:/opt/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin/ghdl/bin:.:/opt/electron-linux # Reorder PATH so local bin is first
 export JUNIT_HOME=/usr/share/java
 
 alias grep="grep --color=auto"
