@@ -126,6 +126,13 @@ Plug 'scrooloose/nerdtree'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'sickill/vim-monokai'
 Plug 'tpope/vim-git'
+Plug 'pangloss/vim-javascript'
+Plug 'posva/vim-vue'
+Plug 'flazz/vim-colorschemes'
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
+
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 "Plug 'junegunn/vim-easy-align'
@@ -161,8 +168,9 @@ call plug#end()
 filetype plugin indent on " required by Pathogen Plugin Manager
 
 " Theme
+
 set background=light
-colorscheme monokai
+colorscheme Revolution
 
 " CtrlP
 map <leader>t <C-p>
