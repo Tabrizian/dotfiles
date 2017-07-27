@@ -1,13 +1,12 @@
 # {{{ Exports
 
-# NVM Installation
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads nvm
-
 # PATH
 export PATH=~/.local/bin:/usr/local/go/bin:/opt/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin/ghdl/bin:.:/opt/electron-linux # Reorder PATH so local bin is first
 
 # Default Editor
 export EDITOR="vim"
+
+source ~/.fonts/*.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -22,10 +21,16 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH=/home/iman/.oh-my-zsh
 
+POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs)
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# POWERLEVEL9K_MODE='awesome-fontconfig'
+ZSH_THEME="powerlevel9k/powerlevel9k"
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -67,7 +72,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, tmux, sudo)
+plugins=(git, tmux, sudo, jsontools)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -123,6 +128,7 @@ if [[ ! $TERM =~ screen ]]; then
     tmuxopen Main
   else
     tmux
+    tmuxkill 0
   fi
 fi
 
@@ -131,3 +137,15 @@ fi
 # {{{ Colors
 test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 # }}}
+
+# {{{ CEIT BOT
+function bot() {
+  ~/Documents/Git/bot-remote/index.js $@
+}
+# }}}
+
+docker-ip() {
+  docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
+}
+# added by travis gem
+[ -f /home/iman/.travis/travis.sh ] && source /home/iman/.travis/travis.sh
