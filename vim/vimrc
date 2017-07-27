@@ -129,6 +129,11 @@ Plug 'tpope/vim-git'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'flazz/vim-colorschemes'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'ervandew/supertab'
+Plug 'wellle/targets.vim'
+Plug 'vim-syntastic/syntastic'
+
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
