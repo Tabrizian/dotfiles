@@ -133,6 +133,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
 Plug 'wellle/targets.vim'
 Plug 'vim-syntastic/syntastic'
+Plug 'wakatime/vim-wakatime'
+Plug 'wavded/vim-stylus'
 
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 
