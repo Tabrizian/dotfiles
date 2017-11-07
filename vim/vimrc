@@ -135,6 +135,9 @@ Plug 'wellle/targets.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'wakatime/vim-wakatime'
 Plug 'wavded/vim-stylus'
+Plug 'junegunn/vim-emoji'
+
+set completefunc=emoji#complete
 
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 

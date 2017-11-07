@@ -1,7 +1,7 @@
 # {{{ Exports
 
 # PATH
-export PATH=~/.local/bin:/usr/local/go/bin:/opt/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin/ghdl/bin:.:/opt/electron-linux # Reorder PATH so local bin is first
+export PATH=~/.local/bin:/usr/local/go/bin:/opt/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin/ghdl/bin:.:/opt/electron-linux:~/.yarn/bin # Reorder PATH so local bin is first
 
 # Default Editor
 export EDITOR="vim"
@@ -21,15 +21,14 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH=/home/iman/.oh-my-zsh
 
-POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs)
+# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs)
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # POWERLEVEL9K_MODE='awesome-fontconfig'
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="amuse"
 
 
 # Uncomment the following line to use case-sensitive completion.
@@ -121,16 +120,6 @@ function tmuxnew() {
 function tmuxkill() {
   tmux kill-session -t $1
 }
-
-# Starts TMUX automatically
-if [[ ! $TERM =~ screen ]]; then
-  if tmux info &> /dev/null; then
-    tmuxopen Main
-  else
-    tmux
-    tmuxkill 0
-  fi
-fi
 
 # }}}
 
